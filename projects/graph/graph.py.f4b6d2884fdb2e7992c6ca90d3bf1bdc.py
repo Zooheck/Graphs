@@ -100,7 +100,7 @@ class Graph:
             # if yes, that becomes the new comparison item
         visited.reverse()
         current = visited[0]
-        for i in range(1, len(visited) - 1):
+        for i in range (1, len(visited) - 1):
             next_children = visited[i+1][1]
             if current in next_children:
                 path.append(current)
@@ -108,7 +108,6 @@ class Graph:
         path.append(starting_vertex)
         path.reverse()
         return path
-
     def dfs(self, starting_vertex, destination_vertex):
         """
         Return a list containing a path from
